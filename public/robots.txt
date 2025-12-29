@@ -1,0 +1,82 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /backend/
+Disallow: /cp/
+Disallow: /nova/
+Disallow: /nova-api/
+Disallow: /horizon/
+Disallow: /telescope/
+Disallow: /log-viewer/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /package.json
+Disallow: /yarn.lock
+Disallow: /artisan
+Disallow: /env
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /config/
+Disallow: /database/
+Disallow: /tests/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /debug/
+Disallow: /phpinfo
+Disallow: /server-status
+Disallow: /server-info
+
+# Laravel specific paths
+Disallow: /_ignition/
+Disallow: /_debugbar/
+Disallow: /livewire/
+Disallow: /broadcasting/
+Disallow: /sanctum/
+Disallow: /oauth/
+Disallow: /passport/
+
+# E-commerce specific
+Disallow: /cart/add
+Disallow: /cart/update
+Disallow: /cart/remove
+Disallow: /checkout/process
+Disallow: /checkout/payment
+Disallow: /checkout/confirm
+Disallow: /user/orders/
+Disallow: /user/profile/
+Disallow: /user/wishlist/
+Disallow: /user/history/
+Disallow: /user/invoices/
+Disallow: /compare/add
+Disallow: /search/autocomplete
+Disallow: /search/suggest
+
+# Query parameters to avoid duplicates
+Disallow: /*?*sort=
+Disallow: /*?*order=
+Disallow: /*?*page=
+Disallow: /*?*view=
+Disallow: /*?*mode=
+Disallow: /*?*filter=
+Disallow: /*?*limit=
+Disallow: /*?*session_id=
+Disallow: /*?*token=
+Disallow: /*?*ref=
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
+Disallow: /*?*utm_term=
+Disallow: /*?*utm_content=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Disallow: /*?*yclid=
+Disallow: /*?*PHPSESSID
+Disallow: /*?*XDEBUG_SESSION
+
+# Sitemaps
+Sitemap: https://ehc.ishop.event-horizon.club/sitemap.xml

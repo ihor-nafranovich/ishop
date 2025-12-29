@@ -1,0 +1,7 @@
+[16-Jun-2025 16:51:52 UTC] PHP Fatal error:  Trait "Cviebrock\EloquentSluggable\Sluggable" not found in /home/eventho1/i-shop/app/Models/Category.php on line 8
+[16-Jun-2025 16:51:58 UTC] PHP Fatal error:  Trait "Cviebrock\EloquentSluggable\Sluggable" not found in /home/eventho1/i-shop/app/Models/Category.php on line 8
+[16-Jun-2025 16:52:09 UTC] PHP Fatal error:  Trait "Cviebrock\EloquentSluggable\Sluggable" not found in /home/eventho1/i-shop/app/Models/Category.php on line 8
+[16-Jun-2025 16:53:31 UTC] PHP Fatal error:  Trait "Cviebrock\EloquentSluggable\Sluggable" not found in /home/eventho1/i-shop/app/Models/Category.php on line 8
+[16-Jun-2025 16:54:21 UTC] PHP Fatal error:  Trait "Cviebrock\EloquentSluggable\Sluggable" not found in /home/eventho1/i-shop/app/Models/Category.php on line 8
+[16-Jun-2025 16:54:30 UTC] PHP Fatal error:  Trait "Cviebrock\EloquentSluggable\Sluggable" not found in /home/eventho1/i-shop/app/Models/Category.php on line 8
+[16-Jun-2025 16:54:41 UTC] PHP Fatal error:  Trait "Cviebrock\EloquentSluggable\Sluggable" not found in /home/eventho1/i-shop/app/Models/Category.php on line 8
