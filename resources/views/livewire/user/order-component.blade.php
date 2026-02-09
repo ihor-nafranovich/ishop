@@ -12,8 +12,8 @@
             <div class="col-12">
                 <nav class="breadcrumbs">
                     <ul>
-                        <li><a wire:navigate href="{{ route('home') }}">Home</a></li>
-                        <li><a wire:navigate href="{{ route('account') }}">Account</a></li>
+                        <li><a wire:navigate href="{{ route('home') }}">Домашняя</a></li>
+                        <li><a wire:navigate href="{{ route('account') }}">Учетная запись</a></li>
                         <li><span>Orders</span></li>
                     </ul>
                 </nav>
@@ -25,7 +25,7 @@
 
         <div class="update-loading" wire:loading>
             <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+                <span class="visually-hidden">Загрузка...</span>
             </div>
         </div>
 
@@ -33,14 +33,14 @@
 
             <div class="col-lg-4 mb-3">
                 <div class="cart-summary p-3 sidebar">
-                    <h5 class="section-title"><span>Links</span></h5>
+                    <h5 class="section-title"><span>Ссылка</span></h5>
                     @include('incs.account-links')
                 </div>
             </div>
 
             <div class="col-lg-8 mb-3">
                 <div class="cart-content p-3 h-100 bg-white">
-                    <h5 class="section-title"><span>Orders</span></h5>
+                    <h5 class="section-title"><span>Заказ</span></h5>
 
                     @if($orders->isNotEmpty())
                         <div class="table-responsive">
@@ -71,7 +71,7 @@
                         </div>
                         {{ $orders->links() }}
                     @else
-                        <p>No orders...</p>
+                        <p>Нет Заказа...</p>
                     @endif
 
                 </div>

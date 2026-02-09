@@ -10,7 +10,7 @@
             <div class="col-12">
                 <nav class="breadcrumbs" id="products">
                     <ul>
-                        <li><a href="{{ route('home') }}" wire:navigate>Home</a></li>
+                        <li><a href="{{ route('home') }}" wire:navigate>Домашняя</a></li>
                         @foreach($breadcrumbs as $breadcrumb_slug => $breadcrumb_title)
                             @if($loop->last)
                                 <li><span>{{ $breadcrumb_title }}</span></li>
@@ -28,7 +28,7 @@
 
         <div class="update-loading" wire:loading wire:target.except="add2Cart">
             <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+                <span class="visually-hidden">Загрузка...</span>
             </div>
         </div>
 
@@ -45,7 +45,7 @@
                     <div class="collapse collapse-filters" id="collapseFilters">
 
                         @if($selected_filters)
-                            <button class="btn btn-outline-warning w-100 mb-3" wire:click="clearFilters">Clear filters</button>
+                            <button class="btn btn-outline-warning w-100 mb-3" wire:click="clearFilters">Очистить фильтры</button>
 
                             <div class="selected-filters mb-3">
                                 @foreach($filter_groups as $filter_group)
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                 @else
-                    <p>No products found...</p>
+                    <p>Нет выбранных товаров ...</p>
                 @endif
 
             </div>

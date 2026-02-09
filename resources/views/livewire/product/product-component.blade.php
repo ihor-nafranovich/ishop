@@ -12,7 +12,7 @@
             <div class="col-12">
                 <nav class="breadcrumbs">
                     <ul>
-                        <li><a wire:navigate href="{{ route('home') }}">Home</a></li>
+                        <li><a wire:navigate href="{{ route('home') }}">Домашняя</a></li>
                         @foreach($breadcrumbs as $breadcrumb_slug => $breadcrumb_title)
                             <li><a href="{{ route('category', $breadcrumb_slug) }}"
                                    wire:navigate>{{ $breadcrumb_title }}</a></li>
@@ -76,7 +76,7 @@
                                 <span>Add to cart</span>
                                 <div wire:loading wire:target="add2Cart({{ $product->id }}, true)">
                                     <div class="spinner-grow spinner-grow-sm" role="status">
-                                        <span class="visually-hidden">Loading...</span>
+                                        <span class="visually-hidden">Загрузка...</span>
                                     </div>
                                 </div>
                             </button>
@@ -180,7 +180,7 @@
                 <div class="row mb-5">
                     <div class="col-12">
                         <h2 class="section-title">
-                            <span>Related products</span>
+                            <span>Соответствующий товар</span>
                         </h2>
                     </div>
                 </div>

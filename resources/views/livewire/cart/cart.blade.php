@@ -12,8 +12,8 @@
             <div class="col-12">
                 <nav class="breadcrumbs">
                     <ul>
-                        <li><a wire:navigate href="{{ route('home') }}">Home</a></li>
-                        <li><span>Cart</span></li>
+                        <li><a wire:navigate href="{{ route('home') }}">Домашняя</a></li>
+                        <li><span>Корзина</span></li>
                     </ul>
                 </nav>
             </div>
@@ -31,18 +31,18 @@
 
                             <div class="update-loading" wire:loading wire:target="updateItemQuanity, removeFromCart, clearCart">
                                 <div class="spinner-border" role="status">
-                                    <span class="visually-hidden">Loading...</span>
+                                    <span class="visually-hidden">Загрузка...</span>
                                 </div>
                             </div>
 
                             <table class="table align-middle table-hover">
                                 <thead class="table-dark">
                                 <tr>
-                                    <th>Photo</th>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Qty</th>
-                                    <th>Total</th>
+                                    <th>Фотография</th>
+                                    <th>Наименование</th>
+                                    <th>Цена</th>
+                                    <th>Количество</th>
+                                    <th>Итог</th>
                                     <th><i class="fa-regular fa-trash-can"></i></th>
                                 </tr>
                                 </thead>
@@ -90,14 +90,14 @@
                                 <tfoot>
                                 <tr>
                                     <td colspan="6" class="text-end">
-                                        <button class="btn btn-outline-danger" wire:click="clearCart" wire:loading.attr="disabled" wire:target="clearCart">Clear Cart</button>
+                                        <button class="btn btn-outline-danger" wire:click="clearCart" wire:loading.attr="disabled" wire:target="clearCart">Очистить корзину</button>
                                     </td>
                                 </tr>
                                 </tfoot>
                             </table>
                         </div>
                     @else
-                        <p>Cart is empty...</p>
+                        <p>Корзина пуста...</p>
                     @endif
                 </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="col-lg-4 mb-3">
 
                 <div class="cart-summary p-3 sidebar">
-                    <h5 class="section-title"><span>Cart Summary</span></h5>
+                    <h5 class="section-title"><span>Информация о корзине</span></h5>
 
                     <div class="d-flex justify-content-between my-3">
                         <h6>Products</h6>
@@ -124,7 +124,7 @@
 
                     @if($cart)
                         <div class="d-grid">
-                            <a wire:navigate href="{{ route('checkout') }}" class="btn btn-warning">Checkout</a>
+                            <a wire:navigate href="{{ route('checkout') }}" class="btn btn-warning">Проверить</a>
                         </div>
                     @endif
 

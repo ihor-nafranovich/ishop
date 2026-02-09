@@ -164,7 +164,7 @@
             <div class="row mb-5">
                 <div class="col-12">
                     <h2 class="section-title">
-                        <span>About Us</span>
+                        <span>О нас</span>
                     </h2>
                 </div>
             </div>

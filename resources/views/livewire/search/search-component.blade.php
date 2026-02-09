@@ -13,7 +13,7 @@
                 <nav class="breadcrumbs" id="products">
                     <ul>
                         <li><a href="{{ route('home') }}" wire:navigate>Home</a></li>
-                        <li><span>Search results</span></li>
+                        <li><span>Результаты поиска</span></li>
                     </ul>
                 </nav>
             </div>
@@ -24,7 +24,7 @@
 
         <div class="update-loading" wire:loading wire:target.except="add2Cart">
             <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+                <span class="visually-hidden">Загрузка...</span>
             </div>
         </div>
 
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 @else
-                    <p>No products found...</p>
+                    <p>Товары не найдены...</p>
                 @endif
 
             </div>

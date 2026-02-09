@@ -12,7 +12,7 @@
             <div class="col-12">
                 <nav class="breadcrumbs">
                     <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('home') }}">Домашняя</a></li>
                         <li><span>Login</span></li>
                     </ul>
                 </nav>
@@ -25,7 +25,7 @@
             <div class="col-12">
 
                 <div class="page-register bg-white p-3">
-                    <h1 class="section-title h3"><span>Login</span></h1>
+                    <h1 class="section-title h3"><span>Имя</span></h1>
 
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="password" class="form-label required">Password</label>
+                                    <label for="password" class="form-label required">Пароль</label>
                                     <input type="password" class="form-control @error('email') is-invalid @enderror" id="password"
                                            placeholder="Password" wire:model="password">
                                     @error('password')
@@ -66,7 +66,7 @@
                                         Login
                                         <div wire:loading wire:target="login">
                                             <div class="spinner-grow spinner-grow-sm" role="status">
-                                                <span class="visually-hidden">Loading...</span>
+                                                <span class="visually-hidden">Загрузка...</span>
                                             </div>
                                         </div>
                                     </button>

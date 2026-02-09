@@ -12,9 +12,9 @@
             <div class="col-12">
                 <nav class="breadcrumbs">
                     <ul>
-                        <li><a wire:navigate href="{{ route('home') }}">Home</a></li>
-                        <li><a wire:navigate href="{{ route('account') }}">Account</a></li>
-                        <li><a wire:navigate href="{{ route('orders') }}">Orders</a></li>
+                        <li><a wire:navigate href="{{ route('home') }}">Домашняя</a></li>
+                        <li><a wire:navigate href="{{ route('account') }}">Учетная запись</a></li>
+                        <li><a wire:navigate href="{{ route('orders') }}">Заказ</a></li>
                         <li><span>Order</span></li>
                     </ul>
                 </nav>
@@ -26,7 +26,7 @@
 
         <div class="update-loading" wire:loading>
             <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+                <span class="visually-hidden">Загрузка...</span>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
 
             <div class="col-lg-4 mb-3">
                 <div class="cart-summary p-3 sidebar">
-                    <h5 class="section-title"><span>Links</span></h5>
+                    <h5 class="section-title"><span>Ссылка</span></h5>
                     @include('incs.account-links')
                 </div>
             </div>
@@ -47,11 +47,11 @@
                         <table class="table table-bordered table-striped table-hover">
                             <thead>
                             <tr>
-                                <th>Image</th>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
+                                <th>Фото</th>
+                                <th>Продукт</th>
+                                <th>Цена</th>
+                                <th>Количество</th>
+                                <th>Итог</th>
                             </tr>
                             </thead>
                             <tbody>
