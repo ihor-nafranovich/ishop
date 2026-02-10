@@ -25,7 +25,7 @@
                     </tbody>
                     <tfoot>
                     <tr>
-                        <td colspan="4" class="text-end">Total:</td>
+                        <td colspan="4" class="text-end">Итого:</td>
                         <td>${{ \App\Helpers\Cart\Cart::getCartTotal() }}</td>
                     </tr>
                     </tfoot>
@@ -34,7 +34,7 @@
 
             <div class="text-end mt-3">
                 <a wire:navigate href="{{ route('cart') }}" class="btn btn-outline-warning">Корзина</a>
-                <a wire:navigate href="{{ route('checkout') }}" class="btn btn-outline-secondary">Проверить корзину</a>
+                <a wire:navigate href="{{ route('checkout') }}" class="btn btn-outline-secondary">Оформить заказ</a>
             </div>
         @else
             <p>Корзина пуста...</p>

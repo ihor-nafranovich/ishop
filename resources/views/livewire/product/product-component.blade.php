@@ -73,7 +73,7 @@
                             <input type="number" class="form-control" value="{{ $quantity }}" wire:model="quantity" min="1">
                             <button class="btn btn-warning" wire:click="add2Cart({{ $product->id }}, true)" wire:loading.attr="disabled">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span>Add to cart</span>
+                                <span>Добавить в корзину</span>
                                 <div wire:loading wire:target="add2Cart({{ $product->id }}, true)">
                                     <div class="spinner-grow spinner-grow-sm" role="status">
                                         <span class="visually-hidden">Загрузка...</span>
@@ -136,14 +136,14 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
                                     data-bs-target="#description-tab-pane" type="button" role="tab"
-                                    aria-controls="description-tab-pane" aria-selected="true">Description
+                                    aria-controls="description-tab-pane" aria-selected="true">Описание
                             </button>
                         </li>
                         @if($attributes->isNotEmpty())
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="features-tab" data-bs-toggle="tab"
                                         data-bs-target="#features-tab-pane" type="button" role="tab"
-                                        aria-controls="features-tab-pane" aria-selected="false">Features
+                                        aria-controls="features-tab-pane" aria-selected="false">Характеристики
                                 </button>
                             </li>
                         @endif

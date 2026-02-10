@@ -32,7 +32,7 @@
                             <form wire:submit="save">
 
                                 <div class="mb-3">
-                                    <label for="name" class="form-label required">Домашняя</label>
+                                    <label for="name" class="form-label required">Имя</label>
                                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                                            id="name" placeholder="Name" wire:model="name">
                                     @error('name')
@@ -66,7 +66,7 @@
 
                                 <div class="mb-3">
                                     <button type="submit" class="btn btn-warning">
-                                        Registration
+                                        Зарегистрироваться
                                         <div wire:loading wire:target="save">
                                             <div class="spinner-grow spinner-grow-sm" role="status">
                                                 <span class="visually-hidden">Загрузка...</span>

@@ -14,7 +14,7 @@
                     <ul>
                         <li><a wire:navigate href="{{ route('home') }}">Домашняя</a></li>
                         <li><a wire:navigate href="{{ route('account') }}">Учетная запись</a></li>
-                        <li><span>Orders</span></li>
+                        <li><span>Заказы</span></li>
                     </ul>
                 </nav>
             </div>
@@ -48,10 +48,10 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Total</th>
-                                    <th>Status</th>
-                                    <th>Created</th>
-                                    <th>Updated</th>
+                                    <th>Итого</th>
+                                    <th>Статус</th>
+                                    <th>Создан</th>
+                                    <th>Обновлен</th>
                                     <th><i class="fa-solid fa-eye"></i></th>
                                 </tr>
                                 </thead>
@@ -60,7 +60,7 @@
                                     <tr wire:key="{{ $order->id }}">
                                         <td>{{ $order->id }}</td>
                                         <td>${{ $order->total }}</td>
-                                        <td>{{ $order->status ? 'Completed' : 'New' }}</td>
+                                        <td>{{ $order->status ? 'Завершен' : 'Новый' }}</td>
                                         <td>{{ $order->created_at }}</td>
                                         <td>{{ $order->updated_at }}</td>
                                         <td><a href="{{ route('orders-show', $order->id) }}" class="btn btn-warning" wire:navigate><i class="fa-solid fa-eye"></i></a></td>

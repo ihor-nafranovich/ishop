@@ -32,13 +32,13 @@ class ChangeAccountComponent extends Component
         }
 
         $user->update($validated);
-        $this->js("toastr.success('Account details updated successfully!')");
+        $this->js("toastr.success('Данные учетной записи успешно обновлены!')");
     }
 
     public function render()
     {
         return view('livewire.user.change-account-component', [
-            'title' => 'Edit account'
+            'title' => 'Изменить учетную запись'
         ]);
     }
 }

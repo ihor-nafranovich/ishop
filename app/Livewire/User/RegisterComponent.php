@@ -20,14 +20,14 @@ class RegisterComponent extends Component
             'password' => 'required|min:6',
         ]);
         $user = User::query()->create($validated);
-        session()->flash('success', 'Thanks for registration!');
+        session()->flash('success', 'Спасибо за регистрацию!');
         $this->redirectRoute('login', navigate: true);
     }
 
     public function render()
     {
         return view('livewire.user.register-component', [
-            'title' => 'Register'
+            'title' => 'Регистрация'
         ]);
     }
 }

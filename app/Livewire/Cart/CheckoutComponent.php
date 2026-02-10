@@ -63,18 +63,18 @@ class CheckoutComponent extends Component
 
             \App\Helpers\Cart\Cart::clearCart();
             $this->dispatch('cart-updated');
-            $this->js("toastr.success('Success ordering!')");
+            $this->js("toastr.success('Заказ успешно оформлен!')");
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error ordering!')");
+            $this->js("toastr.error('Ошибка оформления заказа!')");
         }
     }
 
     public function render()
     {
         return view('livewire.cart.checkout-component', [
-            'title' => 'Checkout'
+            'title' => 'Оформление заказа'
         ]);
     }
 }

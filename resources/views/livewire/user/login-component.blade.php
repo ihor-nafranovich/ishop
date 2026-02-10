@@ -13,7 +13,7 @@
                 <nav class="breadcrumbs">
                     <ul>
                         <li><a href="{{ route('home') }}">Домашняя</a></li>
-                        <li><span>Login</span></li>
+                        <li><span>Вход</span></li>
                     </ul>
                 </nav>
             </div>
@@ -63,7 +63,7 @@
 
                                 <div class="mb-3">
                                     <button type="submit" class="btn btn-warning">
-                                        Login
+                                        Вход
                                         <div wire:loading wire:target="login">
                                             <div class="spinner-grow spinner-grow-sm" role="status">
                                                 <span class="visually-hidden">Загрузка...</span>

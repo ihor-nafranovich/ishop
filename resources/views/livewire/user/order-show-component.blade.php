@@ -14,8 +14,8 @@
                     <ul>
                         <li><a wire:navigate href="{{ route('home') }}">Домашняя</a></li>
                         <li><a wire:navigate href="{{ route('account') }}">Учетная запись</a></li>
-                        <li><a wire:navigate href="{{ route('orders') }}">Заказ</a></li>
-                        <li><span>Order</span></li>
+                        <li><a wire:navigate href="{{ route('orders') }}">Заказы</a></li>
+                        <li><span>Заказ</span></li>
                     </ul>
                 </nav>
             </div>
@@ -41,7 +41,7 @@
 
             <div class="col-lg-8 mb-3">
                 <div class="cart-content p-3 h-100 bg-white">
-                    <h5 class="section-title"><span>Order #{{ $order->id }}</span></h5>
+                    <h5 class="section-title"><span>Заказ #{{ $order->id }}</span></h5>
 
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover">
@@ -65,14 +65,14 @@
                                 </tr>
                             @endforeach
                             <tr>
-                                <th colspan="5" class="text-end">Total: ${{ $order->total }}</th>
+                                <th colspan="5" class="text-end">Итого: ${{ $order->total }}</th>
                             </tr>
                             </tbody>
                         </table>
                     </div>
 
                     @if($order->note)
-                        <p><strong>Note:</strong> {{ $order->note }}</p>
+                        <p><strong>Примечание:</strong> {{ $order->note }}</p>
                     @endif
 
                 </div>

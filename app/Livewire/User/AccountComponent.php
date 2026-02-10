@@ -9,7 +9,7 @@ class AccountComponent extends Component
     public function render()
     {
         return view('livewire.user.account-component', [
-            'title' => 'Account'
+            'title' => 'Учетная запись'
         ]);
     }
 }

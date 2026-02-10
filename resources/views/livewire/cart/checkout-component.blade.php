@@ -13,7 +13,7 @@
                 <nav class="breadcrumbs">
                     <ul>
                         <li><a wire:navigate href="{{ route('home') }}">Домашняя</a></li>
-                        <li><span>Проверить</span></li>
+                        <li><span>Оформление заказа</span></li>
                     </ul>
                 </nav>
             </div>
@@ -29,7 +29,7 @@
                     <div class="col-lg-8 mb-3">
                         <div class="Checkout p-3 h-100 bg-white">
 
-                            <h1 class="section-title h5"><span>Проверить</span></h1>
+                            <h1 class="section-title h5"><span>Оформление заказа</span></h1>
 
                             <form wire:submit="saveOrder">
 
@@ -106,7 +106,7 @@
                             </ul>
 
                             <div class="d-flex justify-content-between pt-3 border-top">
-                                <h3>Всего</h3>
+                                <h3>Итого</h3>
                                 <h3>${{ \App\Helpers\Cart\Cart::getCartTotal() }}</h3>
                             </div>
 

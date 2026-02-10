@@ -74,7 +74,7 @@
 
                         <div class="mb-3">
                             <button type="submit" class="btn btn-warning">
-                                Save
+                                Сохранить
                                 <div wire:loading wire:target="save">
                                     <div class="spinner-grow spinner-grow-sm" role="status">
                                         <span class="visually-hidden">Загрузка...</span>

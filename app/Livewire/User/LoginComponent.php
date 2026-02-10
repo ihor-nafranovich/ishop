@@ -19,10 +19,10 @@ class LoginComponent extends Component
         ]);
 
         if (Auth::attempt($validated)) {
-            session()->flash('success', 'Login successful');
+            session()->flash('success', 'Вход выполнен успешно');
             $this->redirectRoute('account', navigate: true);
         } else {
-            $this->js("toastr.error('Login failed')");
+            $this->js("toastr.error('Ошибка входа')");
             $this->reset();
         }
     }
@@ -30,7 +30,7 @@ class LoginComponent extends Component
     public function render()
     {
         return view('livewire.user.login-component', [
-            'title' => 'Login'
+            'title' => 'Вход'
         ]);
     }
 }

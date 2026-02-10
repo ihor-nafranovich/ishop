@@ -23,7 +23,7 @@ class OrderShowComponent extends Component
             ->firstOrFail();
         return view('livewire.user.order-show-component', [
             'order' => $order,
-            'title' => 'Order'
+            'title' => 'Заказ'
         ]);
     }
 }
