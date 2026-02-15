@@ -22,11 +22,11 @@ class CategoryComponent extends Component
     #[Url]
     public string $sort = 'default';
     public array $sortList = [
-        'default' => ['title' => 'Default', 'order_field' => 'id', 'order_direction' => 'desc'],
-        'name-asc' => ['title' => 'Name (a-z)', 'order_field' => 'title', 'order_direction' => 'asc'],
-        'name-desc' => ['title' => 'Name (z-a)', 'order_field' => 'title', 'order_direction' => 'desc'],
-        'price-asc' => ['title' => 'Price (low > high)', 'order_field' => 'price', 'order_direction' => 'asc'],
-        'price-desc' => ['title' => 'Price (high > low)', 'order_field' => 'price', 'order_direction' => 'desc'],
+        'default' => ['title' => 'По умолчанию', 'order_field' => 'id', 'order_direction' => 'desc'],
+        'name-asc' => ['title' => 'Название (а-я)', 'order_field' => 'title', 'order_direction' => 'asc'],
+        'name-desc' => ['title' => 'Название (я-а)', 'order_field' => 'title', 'order_direction' => 'desc'],
+        'price-asc' => ['title' => 'Цена (низкая > высокая)', 'order_field' => 'price', 'order_direction' => 'asc'],
+        'price-desc' => ['title' => 'Цена (высокая > низкая)', 'order_field' => 'price', 'order_direction' => 'desc'],
     ];
 
     #[Url]

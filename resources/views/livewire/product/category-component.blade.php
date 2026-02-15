@@ -104,8 +104,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text">Sort By:</span>
-                                <select class="form-select" aria-label="Sort by:" wire:change="changeSort" wire:model="sort">
+                                <span class="input-group-text">Сортировать по:</span>
+                                <select class="form-select" aria-label="Сортировать по:" wire:change="changeSort" wire:model="sort">
                                     @foreach($sortList as $k => $item)
                                         <option value="{{ $k }}" @if($k == $sort) selected @endif wire:key="{{ $k }}">{{ $item['title'] }}</option>
                                     @endforeach
@@ -114,8 +114,8 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text">Show:</span>
-                                <select class="form-select" aria-label="Show:" wire:change="changeLimit" wire:model="limit">
+                                <span class="input-group-text">Показать:</span>
+                                <select class="form-select" aria-label="Показать:" wire:change="changeLimit" wire:model="limit">
                                     @foreach($limitList as $k => $item)
                                         <option @if($k == $limit) selected @endif wire:key="{{ $k }}">{{ $item }}</option>
                                     @endforeach
