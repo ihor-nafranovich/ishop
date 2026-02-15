@@ -70,8 +70,8 @@ class ProductCreateComponent extends Component
             'is_new' => 'boolean',
             'excerpt' => 'nullable|max:255',
             'content' => 'required',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
-            'gallery.*' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp,gif,svg|max:2048',
+            'gallery.*' => 'nullable|image|mimes:jpg,jpeg,png,webp,gif,svg|max:2048',
         ];
     }
 
