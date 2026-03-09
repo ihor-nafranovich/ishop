@@ -31,7 +31,7 @@ class FileManagerComponent extends Component
 
         $validated['path'] = "uploads/" . $validated['path']->store($folders);
         Media::query()->create($validated);
-        $this->js("toastr.success('Upload successfully')");
+        $this->js("toastr.success('Файл успешно загружен')");
         $this->path = null;
     }
 

@@ -9,7 +9,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 #[Layout('components.layouts.admin')]
-#[Title('Edit User')]
+#[Title('Редактировать пользователя')]
 class UserEditComponent extends Component
 {
 
@@ -45,7 +45,7 @@ class UserEditComponent extends Component
             $this->user->password = $validated['password'];
         }
         $this->user->save();
-        session()->flash('success', 'User updated successfully');
+        session()->flash('success', 'Пользователь успешно обновлен');
         $this->redirectRoute('admin.users.index', navigate: true);
     }
 

@@ -12,7 +12,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 #[Layout('components.layouts.admin')]
-#[Title('Products')]
+#[Title('Продукты')]
 class ProductIndexComponent extends Component
 {
     use WithPagination;
@@ -36,12 +36,12 @@ class ProductIndexComponent extends Component
             if ($gallery) {
                 Storage::disk('public_uploads_delete')->delete($gallery);
             }
-            $this->js("toastr.success('Product removed')");
+            $this->js("toastr.success('Продукт удален')");
             return;
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error deleting product')");
+            $this->js("toastr.error('Ошибка при удалении продукта')");
         }
     }
 

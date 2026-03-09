@@ -9,7 +9,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Create Filter')]
+#[Title('Создать фильтр')]
 class FilterCreateComponent extends Component
 {
 
@@ -24,7 +24,7 @@ class FilterCreateComponent extends Component
         ]);
 
         Filter::query()->create($validated);
-        session()->flash('success', 'Filter created successfully');
+        session()->flash('success', 'Фильтр успешно создан');
         $this->redirectRoute('admin.filters.index', navigate: true);
     }
 

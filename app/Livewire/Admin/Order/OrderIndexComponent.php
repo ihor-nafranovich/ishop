@@ -11,7 +11,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 #[Layout('components.layouts.admin')]
-#[Title('Orders')]
+#[Title('Заказы')]
 class OrderIndexComponent extends Component
 {
 
@@ -24,12 +24,12 @@ class OrderIndexComponent extends Component
             $order->orderProducts()->delete();
             $order->delete();
             DB::commit();
-            $this->js("toastr.success('Order removed')");
+            $this->js("toastr.success('Заказ удален')");
             return;
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error deleting order')");
+            $this->js("toastr.error('Ошибка при удалении заказа')");
         }
     }
 

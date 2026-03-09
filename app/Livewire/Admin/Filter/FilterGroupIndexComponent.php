@@ -11,7 +11,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Filter Groups')]
+#[Title('Группы фильтров')]
 class FilterGroupIndexComponent extends Component
 {
 
@@ -30,12 +30,12 @@ class FilterGroupIndexComponent extends Component
                 ->delete();
             $filterGroup->delete();
             DB::commit();
-            $this->js("toastr.success('Filter group removed')");
+            $this->js("toastr.success('Группа фильтров удалена')");
             return;
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error deleting filter group')");
+            $this->js("toastr.error('Ошибка при удалении группы фильтров')");
         }
     }
 

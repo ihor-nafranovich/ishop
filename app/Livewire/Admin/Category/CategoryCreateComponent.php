@@ -11,7 +11,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Create Category')]
+#[Title('Создать категорию')]
 class CategoryCreateComponent extends Component
 {
 
@@ -42,12 +42,12 @@ class CategoryCreateComponent extends Component
             }
             DB::commit();
             cache()->forget('categories_html');
-            session()->flash('success', 'Category created successfully');
+            session()->flash('success', 'Категория успешно создана');
             $this->redirectRoute('admin.categories.index', navigate: true);
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error saving category')");
+            $this->js("toastr.error('Ошибка при сохранении категории')");
         }
 
     }

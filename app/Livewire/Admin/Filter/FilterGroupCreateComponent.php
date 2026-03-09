@@ -3,12 +3,13 @@
 namespace App\Livewire\Admin\Filter;
 
 use App\Models\FilterGroup;
+use Illuminate\Support\Facades\Log;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Create Filter Group')]
+#[Title('Создать группу фильтров')]
 class FilterGroupCreateComponent extends Component
 {
 
@@ -20,9 +21,14 @@ class FilterGroupCreateComponent extends Component
             'title' => 'required|max:255',
         ]);
 
-        FilterGroup::query()->create($validated);
-        session()->flash('success', 'Filter group created successfully');
-        $this->redirectRoute('admin.filter-groups.index', navigate: true);
+        try {
+            FilterGroup::query()->create($validated);
+            session()->flash('success', 'Группа фильтров успешно создана');
+            $this->redirectRoute('admin.filter-groups.index', navigate: true);
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+            $this->js("toastr.error('Ошибка при сохранении группы фильтров')");
+        }
     }
 
     public function render()

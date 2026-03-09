@@ -11,7 +11,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 #[Layout('components.layouts.admin')]
-#[Title('Users')]
+#[Title('Пользователи')]
 class UserIndexComponent extends Component
 {
 
@@ -27,12 +27,12 @@ class UserIndexComponent extends Component
                 ->update(['user_id' => NULL]);
             $user->delete();
             DB::commit();
-            $this->js("toastr.success('User deleted successfully')");
+            $this->js("toastr.success('Пользователь успешно удален')");
             return;
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error deleting user')");
+            $this->js("toastr.error('Ошибка при удалении пользователя')");
         }
     }
 

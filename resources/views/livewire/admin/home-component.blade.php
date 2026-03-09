@@ -6,7 +6,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Products</div>
+                            Продукты</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $products_cnt }}</div>
                     </div>
                     <div class="col-auto">
@@ -23,7 +23,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            Users</div>
+                            Пользователи</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $users_cnt }}</div>
                     </div>
                     <div class="col-auto">
@@ -39,7 +39,7 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Orders
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Заказы
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $orders_cnt }}</div>
                     </div>
@@ -57,7 +57,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                            Orders total</div>
+                            Общая сумма заказов</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{ \Illuminate\Support\Number::currency($orders_total) }}</div>
                     </div>
                     <div class="col-auto">

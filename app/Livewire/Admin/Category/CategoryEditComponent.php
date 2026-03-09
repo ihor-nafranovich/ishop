@@ -11,7 +11,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Edit Category')]
+#[Title('Редактировать категорию')]
 class CategoryEditComponent extends Component
 {
 
@@ -59,12 +59,12 @@ class CategoryEditComponent extends Component
             }
             DB::commit();
             cache()->forget('categories_html');
-            session()->flash('success', 'Category updated successfully');
+            session()->flash('success', 'Категория успешно обновлена');
             $this->redirectRoute('admin.categories.index', navigate: true);
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error updating category')");
+            $this->js("toastr.error('Ошибка при обновлении категории')");
         }
     }
 

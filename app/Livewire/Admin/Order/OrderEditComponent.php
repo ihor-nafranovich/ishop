@@ -8,7 +8,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Order')]
+#[Title('Заказ')]
 class OrderEditComponent extends Component
 {
 

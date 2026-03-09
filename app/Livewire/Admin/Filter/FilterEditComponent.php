@@ -9,7 +9,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Create Filter Group')]
+#[Title('Редактировать фильтр')]
 class FilterEditComponent extends Component
 {
 
@@ -32,7 +32,7 @@ class FilterEditComponent extends Component
         ]);
 
         $this->filter->update($validated);
-        session()->flash('success', 'Filter updated successfully');
+        session()->flash('success', 'Фильтр успешно обновлен');
         $this->redirectRoute('admin.filters.index', navigate: true);
     }
 

@@ -14,7 +14,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 
 #[Layout('components.layouts.admin')]
-#[Title('Edit Product')]
+#[Title('Редактировать продукт')]
 class ProductEditComponent extends Component
 {
 
@@ -140,12 +140,12 @@ class ProductEditComponent extends Component
             }
 
             DB::commit();
-            session()->flash('success', 'Product updated successfully');
+            session()->flash('success', 'Продукт успешно обновлен');
             $this->redirectRoute('admin.products.index', navigate: true);
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error updating product')");
+            $this->js("toastr.error('Ошибка при обновлении продукта')");
         }
     }
 

@@ -14,7 +14,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 
 #[Layout('components.layouts.admin')]
-#[Title('Create Product')]
+#[Title('Создать продукт')]
 class ProductCreateComponent extends Component
 {
     use WithFileUploads;
@@ -109,12 +109,12 @@ class ProductCreateComponent extends Component
             }
 
             DB::commit();
-            session()->flash('success', 'Product created successfully');
+            session()->flash('success', 'Продукт успешно создан');
             $this->redirectRoute('admin.products.index', navigate: true);
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error saving product')");
+            $this->js("toastr.error('Ошибка при сохранении продукта')");
         }
 
     }

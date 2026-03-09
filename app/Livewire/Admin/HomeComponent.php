@@ -10,7 +10,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Dashboard')]
+#[Title('Панель управления')]
 class HomeComponent extends Component
 {
     public function render()

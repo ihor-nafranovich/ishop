@@ -11,7 +11,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Categories')]
+#[Title('Категории')]
 class CategoryIndexComponent extends Component
 {
 
@@ -20,14 +20,14 @@ class CategoryIndexComponent extends Component
         $categories_cnt = Category::query()
             ->where('parent_id', '=', $category->id)->count();
         if ($categories_cnt) {
-            $this->js("toastr.error('Error! Category has child categories.')");
+            $this->js("toastr.error('Ошибка! Категория содержит подкатегории.')");
             return;
         }
 
         $products_cnt = Product::query()
             ->where('category_id', '=', $category->id)->count();
         if ($products_cnt) {
-            $this->js("toastr.error('Error! Category has products.')");
+            $this->js("toastr.error('Ошибка! Категория содержит продукты.')");
             return;
         }
 
@@ -39,14 +39,14 @@ class CategoryIndexComponent extends Component
             $category->delete();
             DB::commit();
             cache()->forget('categories_html');
-            $this->js("toastr.success('Category removed')");
+            $this->js("toastr.success('Категория удалена')");
             return;
 //            session()->flash('success', 'Category removed');
 //            $this->redirectRoute('admin.categories.index', navigate: true);
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error deleting category')");
+            $this->js("toastr.error('Ошибка при удалении категории')");
         }
     }
 

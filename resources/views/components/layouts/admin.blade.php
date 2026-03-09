@@ -54,7 +54,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin') }}" wire:navigate wire:current.exact="active">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Панель управления</span></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.categories.index') }}" wire:navigate wire:current="active">
@@ -69,7 +69,7 @@
 
         <hr class="sidebar-divider">
         <div class="sidebar-heading">
-            Filters
+            Фильтры
         </div>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.filter-groups.index') }}" wire:navigate wire:current.exact="active">
@@ -96,7 +96,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.orders.index') }}" wire:navigate wire:current="active">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span>Закзы</span></a>
+                <span>Заказы</span></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.users.index') }}" wire:navigate wire:current="active">
@@ -148,11 +148,11 @@
                              aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="{{ route('admin.users.edit', auth()->id()) }}" wire:navigate>
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
+                                Профиль
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
+                                Выход
                             </a>
                         </div>
                     </li>
@@ -165,7 +165,7 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
-                <h1 class="h3 mb-3 text-gray-800">{{ $title ?? 'Admin page' }}</h1>
+                <h1 class="h3 mb-3 text-gray-800">{{ $title ?? 'Админ панель' }}</h1>
 
                 @if(session('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -220,15 +220,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Готовы выйти?</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-body">Нажмите "Выйти" ниже, если вы готовы завершить текущий сеанс.</div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                <a class="btn btn-primary" href="login.html">Выйти</a>
             </div>
         </div>
     </div>

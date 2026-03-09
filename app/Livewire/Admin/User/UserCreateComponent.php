@@ -8,7 +8,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Create User')]
+#[Title('Создать пользователя')]
 class UserCreateComponent extends Component
 {
 
@@ -32,7 +32,7 @@ class UserCreateComponent extends Component
         $user->password = $validated['password'];
         $user->is_admin = $validated['is_admin'];
         $user->save();
-        session()->flash('success', 'User created successfully');
+        session()->flash('success', 'Пользователь успешно создан');
         $this->redirectRoute('admin.users.index', navigate: true);
     }
 

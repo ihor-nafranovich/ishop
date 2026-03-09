@@ -11,7 +11,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 #[Layout('components.layouts.admin')]
-#[Title('Filters List')]
+#[Title('Список фильтров')]
 class FilterIndexComponent extends Component
 {
 
@@ -26,12 +26,12 @@ class FilterIndexComponent extends Component
                 ->delete();
             $filter->delete();
             DB::commit();
-            $this->js("toastr.success('Filter removed')");
+            $this->js("toastr.success('Фильтр удален')");
             return;
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
-            $this->js("toastr.error('Error deleting filter')");
+            $this->js("toastr.error('Ошибка при удалении фильтра')");
         }
     }
 

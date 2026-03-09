@@ -8,7 +8,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('components.layouts.admin')]
-#[Title('Edit Filter Group')]
+#[Title('Редактировать группу фильтров')]
 class FilterGroupEditComponent extends Component
 {
 
@@ -28,7 +28,7 @@ class FilterGroupEditComponent extends Component
         ]);
 
         $this->filterGroup->update($validated);
-        session()->flash('success', 'Filter group updated successfully');
+        session()->flash('success', 'Группа фильтров успешно обновлена');
         $this->redirectRoute('admin.filter-groups.index', navigate: true);
     }
 
