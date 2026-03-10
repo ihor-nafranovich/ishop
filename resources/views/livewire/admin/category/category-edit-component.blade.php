@@ -13,7 +13,7 @@
                     <div class="mb-3">
                         <label for="title" class="form-label required">Заголовок</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                               placeholder="Category title"
+                               placeholder="Заголовок категории"
                                wire:model="title">
                         @error('title')
                         <div class="invalid-feedback">
@@ -59,7 +59,7 @@
 
                     <div class="mb-3">
                         <button type="submit" class="btn btn-info">
-                            Save
+                            Сохранить
                             <div wire:loading wire:target="save" class="spinner-grow spinner-grow-sm" role="status">
                                 <span class="visually-hidden">Загрузка...</span>
                             </div>

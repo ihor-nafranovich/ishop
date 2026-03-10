@@ -10,8 +10,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('admin.categories.index') }}" wire:navigate class="btn btn-primary">Categories
-                    List</a>
+                <a href="{{ route('admin.categories.index') }}" wire:navigate class="btn btn-primary">Список категорий</a>
             </div>
             <div class="card-body">
 
@@ -20,7 +19,7 @@
                     <div class="mb-3">
                         <label for="title" class="form-label required">Заголовок</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                               placeholder="Category title"
+                               placeholder="Заголовок категории"
                                wire:model="title">
                         @error('title')
                         <div class="invalid-feedback">
@@ -67,7 +66,7 @@
 
                     <div class="mb-3">
                         <button type="submit" class="btn btn-info">
-                            Save
+                            Сохранить
                             <div wire:loading wire:target="save" class="spinner-grow spinner-grow-sm" role="status">
                                 <span class="visually-hidden">Загрузка...</span>
                             </div>

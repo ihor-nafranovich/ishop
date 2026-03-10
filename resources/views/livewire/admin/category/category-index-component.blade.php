@@ -21,7 +21,7 @@
                         <tr>
                             <th style="width: 10%;">ID</th>
                             <th style="width: 70%;">Заголовок</th>
-                            <th>Actions</th>
+                            <th>Действия</th>
                         </tr>
                         </thead>
                         <tbody>
