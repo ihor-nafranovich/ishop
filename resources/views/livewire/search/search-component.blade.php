@@ -2,7 +2,7 @@
 
     @section('metatags')
 
-        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Page Title') }}</title>
+        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Заголовок страницы') }}</title>
         <meta name="description" content="{{ $desc ?? '' }}">
 
     @endsection
@@ -12,7 +12,7 @@
             <div class="col-12">
                 <nav class="breadcrumbs" id="products">
                     <ul>
-                        <li><a href="{{ route('home') }}" wire:navigate>Home</a></li>
+                        <li><a href="{{ route('home') }}" wire:navigate>Главная</a></li>
                         <li><span>Результаты поиска</span></li>
                     </ul>
                 </nav>
@@ -32,7 +32,7 @@
 
             <div class="col-lg-12">
 
-                <h1 class="h3"><span>Search by: <em>{{ $query }}</em></span></h1>
+                <h1 class="h3"><span>Поиск: <em>{{ $query }}</em></span></h1>
 
                 @if(count($products))
 

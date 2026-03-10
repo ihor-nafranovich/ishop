@@ -2,7 +2,7 @@
 
     @section('metatags')
 
-        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Page Title') }}</title>
+        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Заголовок страницы') }}</title>
         <meta name="description" content="{{ $desc ?? '' }}">
 
     @endsection
@@ -71,7 +71,7 @@
                         </div>
                         {{ $orders->links() }}
                     @else
-                        <p>Нет Заказа...</p>
+                        <p>Нет заказов...</p>
                     @endif
 
                 </div>

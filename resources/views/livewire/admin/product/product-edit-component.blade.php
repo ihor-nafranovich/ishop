@@ -4,23 +4,22 @@
 
         <div class="update-loading" wire:loading wire:target="save, category_id">
             <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Загрузка...</span>
             </div>
         </div>
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('admin.products.index') }}" wire:navigate class="btn btn-primary">Products
-                    List</a>
+                <a href="{{ route('admin.products.index') }}" wire:navigate class="btn btn-primary">Список продуктов</a>
             </div>
             <div class="card-body">
 
                 <form wire:submit="save">
 
                     <div class="mb-3">
-                        <label for="title" class="form-label required">Title</label>
+                        <label for="title" class="form-label required">Заголовок</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                               placeholder="Product title"
+                               placeholder="Заголовок продукта"
                                wire:model="title">
                         @error('title')
                         <div class="invalid-feedback">
@@ -30,10 +29,10 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="category_id" class="form-label required">Category</label>
+                        <label for="category_id" class="form-label required">Категория</label>
                         <select wire:model.live="category_id" id="category_id"
                                 class="custom-select @error('category_id') is-invalid @enderror">
-                            <option value="">Select category</option>
+                            <option value="">Выберите категорию</option>
                             {!! \App\Helpers\Category\Category::getMenu('incs.menu-select-tpl') !!}
                         </select>
                         @error('category_id')
@@ -69,9 +68,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="price" class="form-label required">Price</label>
+                        <label for="price" class="form-label required">Цена</label>
                         <input type="number" class="form-control @error('price') is-invalid @enderror" id="price"
-                               placeholder="Product price"
+                               placeholder="Цена продукта"
                                wire:model="price">
                         @error('price')
                         <div class="invalid-feedback">
@@ -81,9 +80,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="old_price" class="form-label">Old price</label>
+                        <label for="old_price" class="form-label">Старая цена</label>
                         <input type="number" class="form-control @error('old_price') is-invalid @enderror" id="old_price"
-                               placeholder="Product old price"
+                               placeholder="Старая цена продукта"
                                wire:model="old_price">
                         @error('old_price')
                         <div class="invalid-feedback">
@@ -93,7 +92,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="is_hit" class="form-check-label">Is hit</label>
+                        <label for="is_hit" class="form-check-label">Хит продаж</label>
                         <input type="checkbox" class="@error('is_hit') is-invalid @enderror" id="is_hit"
                                wire:model="is_hit">
                         @error('is_hit')
@@ -104,7 +103,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="is_new" class="form-check-label">Is new</label>
+                        <label for="is_new" class="form-check-label">Новинка</label>
                         <input type="checkbox" class="@error('is_new') is-invalid @enderror" id="is_new"
                                wire:model="is_new">
                         @error('is_new')
@@ -115,9 +114,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="excerpt" class="form-label">Excerpt</label>
+                        <label for="excerpt" class="form-label">Краткое описание</label>
                         <input type="text" class="form-control @error('excerpt') is-invalid @enderror" id="excerpt"
-                               placeholder="Product excerpt"
+                               placeholder="Краткое описание продукта"
                                wire:model="excerpt">
                         @error('excerpt')
                         <div class="invalid-feedback">
@@ -128,9 +127,9 @@
 
                     <div class="mb-3">
                         <livewire:admin.file-manager.file-manager-component>
-                        <label for="summernote" class="form-label required">Content</label>
+                        <label for="summernote" class="form-label required">Содержание</label>
                         <div wire:ignore>
-                            <textarea class="form-control @error('content') is-invalid @enderror" id="summernote" rows="10" placeholder="Product content"
+                            <textarea class="form-control @error('content') is-invalid @enderror" id="summernote" rows="10" placeholder="Содержание продукта"
                                       wire:model="content"></textarea>
                         </div>
                         @error('content')
@@ -141,7 +140,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="image" class="form-label">Image</label>
+                        <label for="image" class="form-label">Изображение</label>
                         @if($photo)
                             <img src="{{ asset($photo) }}" alt="" height="50">
                         @else
@@ -156,11 +155,11 @@
                         @enderror
 
                         <div wire:loading wire:target="image">
-                            <span class="text-success">Uploading...</span>
+                            <span class="text-success">Загрузка...</span>
                         </div>
 
                         @if(!$errors->has('image') && $image && $image->isPreviewable())
-                            <p class="text-danger">Click on the photo to delete it.</p>
+                            <p class="text-danger">Нажмите на фотографию, чтобы удалить её.</p>
                             <img
                                 src="{{ $image->temporaryUrl() }}"
                                 alt=""
@@ -172,10 +171,10 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="gallery" class="form-label">Gallery</label>
+                        <label for="gallery" class="form-label">Галерея</label>
                         @if($photos)
                             <div>
-                                <p class="text-danger">Click on the photo to delete it.</p>
+                                <p class="text-danger">Нажмите на фотографию, чтобы удалить её.</p>
                                 @foreach($photos as $k => $item)
                                     <img
                                         src="{{ asset($item)  }}"
@@ -183,32 +182,32 @@
                                         height="50"
                                         wire:key="{{ $k }}"
                                         wire:click="deleteGalleryItem({{ $k }})"
-                                        wire:confirm="Are you sure?"
+                                        wire:confirm="Вы уверены?"
                                     >
                                 @endforeach
                             </div>
                         @endif
 
                         <input id="gallery" type="file" class="form-control @error('gallery.*') is-invalid @enderror"
-                               wire:model="gallery" placeholder="Gallery" multiple>
+                               wire:model="gallery" placeholder="Галерея" multiple>
                         @error('gallery.*')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                         <div wire:loading wire:target="gallery">
-                            <span class="text-success">Uploading...</span>
+                            <span class="text-success">Загрузка...</span>
                         </div>
 
                         @if($gallery)
-                            <p class="text-danger">Click on the photo to delete it</p>
+                            <p class="text-danger">Нажмите на фотографию, чтобы удалить её</p>
                             <div class="mt-2">
                                 @foreach($gallery as $photo)
                                     @if($photo->isPreviewable())
                                         <img src="{{ $photo->temporaryUrl() }}" alt="" width="100"
                                              wire:click="removeUpload('gallery', '{{ $photo->getFilename() }}')">
                                     @else
-                                        <span class="text-danger">error!</span>
+                                        <span class="text-danger">ошибка!</span>
                                     @endif
                                 @endforeach
                             </div>
@@ -218,9 +217,9 @@
 
                     <div class="mb-3">
                         <button type="submit" class="btn btn-info">
-                            Save
+                            Сохранить
                             <div wire:loading wire:target="save" class="spinner-grow spinner-grow-sm" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                                <span class="visually-hidden">Загрузка...</span>
                             </div>
                         </button>
                     </div>

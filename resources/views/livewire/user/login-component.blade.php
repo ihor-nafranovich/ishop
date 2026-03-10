@@ -2,7 +2,7 @@
 
     @section('metatags')
 
-        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Page Title') }}</title>
+        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Заголовок страницы') }}</title>
         <meta name="description" content="{{ $desc ?? '' }}">
 
     @endsection
@@ -25,7 +25,7 @@
             <div class="col-12">
 
                 <div class="page-register bg-white p-3">
-                    <h1 class="section-title h3"><span>Имя</span></h1>
+                    <h1 class="section-title h3"><span>Вход</span></h1>
 
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
@@ -33,7 +33,7 @@
                             @if (session('success'))
                                 <div class="alert alert-success alert-dismissible fade show">
                                     {{ session('success') }}
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
                                 </div>
                             @endif
 
@@ -53,7 +53,7 @@
                                 <div class="mb-3">
                                     <label for="password" class="form-label required">Пароль</label>
                                     <input type="password" class="form-control @error('email') is-invalid @enderror" id="password"
-                                           placeholder="Password" wire:model="password">
+                                           placeholder="Пароль" wire:model="password">
                                     @error('password')
                                     <div class="invalid-feedback">
                                         {{ $message }}

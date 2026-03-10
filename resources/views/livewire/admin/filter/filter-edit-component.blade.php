@@ -19,7 +19,7 @@
                     <div class="mb-3">
                         <label for="title" class="form-label required">Заголовок</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                               placeholder="Filter group title"
+                               placeholder="Заголовок группы фильтров"
                                wire:model="title">
                         @error('title')
                         <div class="invalid-feedback">

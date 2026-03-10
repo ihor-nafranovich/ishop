@@ -4,22 +4,22 @@
 
         <div class="update-loading" wire:loading wire:target="save">
             <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Загрузка...</span>
             </div>
         </div>
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('admin.filter-groups.index') }}" wire:navigate class="btn btn-primary">Filter Groups List</a>
+                <a href="{{ route('admin.filter-groups.index') }}" wire:navigate class="btn btn-primary">Список групп фильтров</a>
             </div>
             <div class="card-body">
 
                 <form wire:submit="save">
 
                     <div class="mb-3">
-                        <label for="title" class="form-label required">Title</label>
+                        <label for="title" class="form-label required">Заголовок</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                               placeholder="Filter group title"
+                               placeholder="Заголовок группы фильтров"
                                wire:model="title">
                         @error('title')
                         <div class="invalid-feedback">
@@ -30,9 +30,9 @@
 
                     <div class="mb-3">
                         <button type="submit" class="btn btn-info">
-                            Save
+                            Сохранить
                             <div wire:loading wire:target="save" class="spinner-grow spinner-grow-sm" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                                <span class="visually-hidden">Загрузка...</span>
                             </div>
                         </button>
                     </div>

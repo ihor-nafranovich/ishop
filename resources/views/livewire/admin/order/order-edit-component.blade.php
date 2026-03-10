@@ -4,13 +4,13 @@
 
         <div class="update-loading" wire:loading>
             <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Загрузка...</span>
             </div>
         </div>
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                Order #{{ $order->id }} ({{ $order->status ? 'Completed' : 'New' }})
+                Заказ #{{ $order->id }} ({{ $order->status ? 'Завершён' : 'Новый' }})
             </div>
             <div class="card-body">
 
@@ -23,15 +23,15 @@
                             <td>{{ $order->id }}</td>
                         </tr>
                         <tr>
-                            <th>Customer name</th>
+                            <th>Имя клиента</th>
                             <td>{{ $order->name }}</td>
                         </tr>
                         <tr>
-                            <th>Customer email</th>
+                            <th>Email клиента</th>
                             <td>{{ $order->email }}</td>
                         </tr>
                         <tr>
-                            <th>Status</th>
+                            <th>Статус</th>
                             <td>
                                 <label class="switch">
                                     <input type="checkbox" wire:model.live="status">
@@ -40,19 +40,19 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Total</th>
+                            <th>Итого</th>
                             <td>${{ $order->total }}</td>
                         </tr>
                         <tr>
-                            <th>Created</th>
+                            <th>Создано</th>
                             <td>{{ $order->created_at }}</td>
                         </tr>
                         <tr>
-                            <th>Updated</th>
+                            <th>Обновлено</th>
                             <td>{{ $order->updated_at }}</td>
                         </tr>
                         <tr>
-                            <th>Note</th>
+                            <th>Примечание</th>
                             <td>{{ $order->note }}</td>
                         </tr>
                         </tbody>
@@ -65,7 +65,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                Order products
+                Товары заказа
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -73,10 +73,10 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>Image</th>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
+                            <th>Изображение</th>
+                            <th>Товар</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -90,7 +90,7 @@
                         @endforeach
                         <tr>
                             <td colspan="4" class="text-right font-weight-bold">
-                                Total: ${{ $order->total }}
+                                Итого: ${{ $order->total }}
                             </td>
                         </tr>
                         </tbody>

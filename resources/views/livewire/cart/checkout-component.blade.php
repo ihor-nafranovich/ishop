@@ -2,7 +2,7 @@
 
     @section('metatags')
 
-        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Page Title') }}</title>
+        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Заголовок страницы') }}</title>
         <meta name="description" content="{{ $desc ?? '' }}">
 
     @endsection
@@ -39,7 +39,7 @@
                                         <label for="name" class="form-label required">Имя</label>
                                         <input type="text" id="name"
                                                class="form-control @error('name') is-invalid @enderror"
-                                               placeholder="Иванов Иван" aria-label="Name" wire:model="name">
+                                               placeholder="Иванов Иван" aria-label="Имя" wire:model="name">
                                         @error('name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -51,7 +51,7 @@
                                         <label for="email" class="form-label required">Электронный адрес</label>
                                         <input type="email" id="email"
                                                class="form-control @error('email') is-invalid @enderror"
-                                               placeholder="....@mail.com" aria-label="Name" wire:model="email">
+                                               placeholder="....@mail.com" aria-label="Email" wire:model="email">
                                         @error('email')
                                         <div class="invalid-feedback">
                                             {{ $message }}

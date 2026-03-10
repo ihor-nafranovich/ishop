@@ -56,9 +56,9 @@
 
         <table style="width: 100%;" class="order-details">
             <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
+                <th>Товар</th>
+                <th>Цена</th>
+                <th>Количество</th>
             </tr>
             @foreach($cart as $product)
                 <tr>
@@ -69,11 +69,11 @@
             @endforeach
             <tr>
                 <td colspan="3" style="text-align: right;">
-                    Total: ${{ $total }}
+                    Итого: ${{ $total }}
                 </td>
             </tr>
             <tr>
-                <td>Note</td>
+                <td>Примечание</td>
                 <td colspan="2">
                     {{ $note }}
                 </td>

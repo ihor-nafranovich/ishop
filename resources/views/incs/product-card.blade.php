@@ -1,10 +1,10 @@
 <div class="product-card">
     <div class="product-card-offer">
         @if($product->is_hit)
-            <div class="offer-hit">Hit</div>
+            <div class="offer-hit">Хит</div>
         @endif
         @if($product->is_new)
-            <div class="offer-new">New</div>
+            <div class="offer-new">Новинка</div>
         @endif
     </div>
     <div class="product-thumb">
@@ -30,7 +30,7 @@
                     </div>
                     <div wire:loading wire:target="add2Cart({{ $product->id }})">
                         <div class="spinner-grow spinner-grow-sm" role="status">
-                            <span class="visually-hidden">Loading...</span>
+                            <span class="visually-hidden">Загрузка...</span>
                         </div>
                     </div>
                 </button>

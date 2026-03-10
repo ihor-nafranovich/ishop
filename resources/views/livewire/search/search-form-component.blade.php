@@ -4,7 +4,7 @@
         <form wire:submit="search">
             <div class="input-group">
                 <input type="text" class="form-control" wire:model.live.debounce.500ms="term" placeholder="Поиск..."
-                       aria-label="Searching..." aria-describedby="button-search">
+                       aria-label="Поиск..." aria-describedby="button-search">
                 <button class="btn btn-outline-warning @if(!$term) disabled @endif" type="submit" id="button-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>

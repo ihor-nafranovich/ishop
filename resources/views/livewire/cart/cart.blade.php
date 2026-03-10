@@ -2,7 +2,7 @@
 
     @section('metatags')
 
-        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Page Title') }}</title>
+        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Заголовок страницы') }}</title>
         <meta name="description" content="{{ $desc ?? '' }}">
 
     @endsection
@@ -108,23 +108,23 @@
                     <h5 class="section-title"><span>Информация о корзине</span></h5>
 
                     <div class="d-flex justify-content-between my-3">
-                        <h6>Products</h6>
+                        <h6>Товары</h6>
                         <h6>{{ \App\Helpers\Cart\Cart::getCartQuantityItems() }}</h6>
                     </div>
 
                     <div class="d-flex justify-content-between my-3 border-bottom">
-                        <h6>Items</h6>
+                        <h6>Позиции</h6>
                         <h6>{{ \App\Helpers\Cart\Cart::getCartQuantityTotal() }}</h6>
                     </div>
 
                     <div class="d-flex justify-content-between my-3">
-                        <h3>Total</h3>
+                        <h3>Итого</h3>
                         <h3>{{ \Illuminate\Support\Number::currency(\App\Helpers\Cart\Cart::getCartTotal(), in: 'USD') }}</h3>
                     </div>
 
                     @if($cart)
                         <div class="d-grid">
-                            <a wire:navigate href="{{ route('checkout') }}" class="btn btn-warning">Проверить</a>
+                            <a wire:navigate href="{{ route('checkout') }}" class="btn btn-warning">Оформить заказ</a>
                         </div>
                     @endif
 

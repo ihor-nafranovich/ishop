@@ -1,8 +1,8 @@
 <div>
 
     @section('metatags')
-        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Page Title') }}</title>
-        <meta name="description" content="{{ $desc ?? 'default...' }}">
+        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Заголовок страницы') }}</title>
+        <meta name="description" content="{{ $desc ?? 'по умолчанию...' }}">
     @endsection
 
     <div class="container">
@@ -39,7 +39,7 @@
                     <button class="btn btn-warning w-100 text-start collapse-filters-btn mb-3" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false"
                             aria-controls="collapseExample">
-                        <i class="fa-solid fa-filter"></i> Filters
+                        <i class="fa-solid fa-filter"></i> Фильтры
                     </button>
 
                     <div class="collapse collapse-filters" id="collapseFilters">
@@ -67,7 +67,7 @@
 
                         @foreach($filter_groups as $k => $filter_group)
                             <div class="filter-block" wire:key="{{ $k }}">
-                                <h5 class="section-title"><span>Filter by {{ $filter_group[0]->title }}</span></h5>
+                                <h5 class="section-title"><span>Фильтр по {{ $filter_group[0]->title }}</span></h5>
 
                                 @foreach($filter_group as $filter)
                                 <div class="form-check d-flex justify-content-between" wire:key="{{ $filter->filter_id }}">

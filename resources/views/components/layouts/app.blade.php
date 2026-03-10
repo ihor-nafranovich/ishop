@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @section('metatags')
-        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Page Title') }}</title>
-        <meta name="description" content="Default metadesc">
+        <title>{{ config('app.name') . ' :: ' . ($title ?? 'Заголовок страницы') }}</title>
+        <meta name="description" content="Описание по умолчанию">
     @show
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,9 +98,9 @@
                 <div class="offcanvas offcanvas-start" id="offcanvasNavbar" tabindex="-1"
                      aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Catalog</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Каталог</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
+                                aria-label="Закрыть"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">

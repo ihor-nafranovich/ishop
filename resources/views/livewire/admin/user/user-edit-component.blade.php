@@ -4,22 +4,22 @@
 
         <div class="update-loading" wire:loading wire:target="save">
             <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Загрузка...</span>
             </div>
         </div>
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('admin.users.index') }}" wire:navigate class="btn btn-primary">Users List</a>
+                <a href="{{ route('admin.users.index') }}" wire:navigate class="btn btn-primary">Список пользователей</a>
             </div>
             <div class="card-body">
 
                 <form wire:submit="save">
 
                     <div class="mb-3">
-                        <label for="name" class="form-label required">Name</label>
+                        <label for="name" class="form-label required">Имя</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                               placeholder="Name"
+                               placeholder="Имя"
                                wire:model="name">
                         @error('name')
                         <div class="invalid-feedback">
@@ -41,9 +41,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="password" class="form-label required">Password</label>
+                        <label for="password" class="form-label required">Пароль</label>
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
-                               placeholder="Password"
+                               placeholder="Пароль"
                                wire:model="password">
                         @error('password')
                         <div class="invalid-feedback">
@@ -54,7 +54,7 @@
 
                     @if(auth()->id() != $user->id)
                         <div class="mb-3">
-                            Is Admin?
+                            Администратор?
                             <label class="switch">
                                 <input type="checkbox" wire:model="is_admin">
                                 <span class="slider round"></span>
@@ -64,9 +64,9 @@
 
                     <div class="mb-3">
                         <button type="submit" class="btn btn-info">
-                            Save
+                            Сохранить
                             <div wire:loading wire:target="save" class="spinner-grow spinner-grow-sm" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                                <span class="visually-hidden">Загрузка...</span>
                             </div>
                         </button>
                     </div>
@@ -81,12 +81,12 @@
 
                 <div class="update-loading" wire:loading wire:target="save">
                     <div class="spinner-border" role="status">
-                        <span class="sr-only">Loading...</span>
+                        <span class="sr-only">Загрузка...</span>
                     </div>
                 </div>
 
                 <div class="card-header py-3">
-                    User orders
+                    Заказы пользователя
                 </div>
                 <div class="card-body">
 
@@ -95,18 +95,18 @@
                             <thead>
                             <tr>
                                 <th style="width: 10%;">ID</th>
-                                <th>Status</th>
-                                <th>Total</th>
-                                <th>Created</th>
-                                <th>Updated</th>
-                                <th>Actions</th>
+                                <th>Статус</th>
+                                <th>Итого</th>
+                                <th>Создан</th>
+                                <th>Обновлён</th>
+                                <th>Действия</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($user_orders as $order)
                                 <tr wire:key="{{ $order->id }}">
                                     <td>${{ $order->id }}</td>
-                                    <td>{{ $order->status ? 'Completed' : 'New' }}</td>
+                                    <td>{{ $order->status ? 'Завершён' : 'Новый' }}</td>
                                     <td>${{ $order->total }}</td>
                                     <td>{{ $order->created_at }}</td>
                                     <td>{{ $order->updated_at }}</td>

@@ -16,20 +16,20 @@ trait CartTrait
             $quantity = 1;
         }
         if (Cart::add2Cart($productId, $quantity)) {
-            $this->js("toastr.success('Product added to cart successfully')");
+            $this->js("toastr.success('Товар добавлен в корзину!')");
             $this->dispatch('cart-updated');
         } else {
-            $this->js("toastr.error('Oops! Something went wrong!')");
+            $this->js("toastr.error('Упс! Что-то пошло не так!')");
         }
     }
 
     public function removeFromCart(int $productId): void
     {
         if (Cart::removeProductFromCart($productId)) {
-            $this->js("toastr.success('Product removed from cart successfully')");
+            $this->js("toastr.success('Товар удалён из корзины!')");
             $this->dispatch('cart-updated');
         } else {
-            $this->js("toastr.error('Oops! Something went wrong!')");
+            $this->js("toastr.error('Упс! Что-то пошло не так!')");
         }
     }
 
@@ -40,9 +40,9 @@ trait CartTrait
         }
         if (Cart::updateItemQuanity($productId, $quantity)) {
             $this->dispatch('cart-updated');
-            $this->js("toastr.success('Quantity updated!')");
+            $this->js("toastr.success('Количество обновлено!')");
         } else {
-            $this->js("toastr.error('Error updating!')");
+            $this->js("toastr.error('Ошибка обновления!')");
         }
     }
 
@@ -50,7 +50,7 @@ trait CartTrait
     {
         Cart::clearCart();
         $this->dispatch('cart-updated');
-        $this->js("toastr.success('Cart cleared!')");
+        $this->js("toastr.success('Корзина очищена!')");
     }
 
 }

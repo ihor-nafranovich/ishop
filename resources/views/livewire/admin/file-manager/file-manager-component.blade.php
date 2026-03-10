@@ -2,7 +2,7 @@
 
     <!-- Button trigger modal -->
     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#fileManager">
-        FileManager
+        Файловый менеджер
     </a>
 
     <!-- Modal -->
@@ -18,7 +18,7 @@
 
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Файловый менеджер</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -68,7 +68,7 @@
                                         <div x-data="{ input: '{{ asset($item->path) }}', showMsg: false }" >
                                             <div class="overflow-hidden">
 
-                                                <a @click="navigator.clipboard.writeText(input), showMsg = true, setTimeout(() => showMsg = false, 1000)" class="btn btn-warning" title="Copy url">
+                                                <a @click="navigator.clipboard.writeText(input), showMsg = true, setTimeout(() => showMsg = false, 1000)" class="btn btn-warning" title="Копировать ссылку">
                                                     <i class="far fa-copy"></i>
                                                 </a>
                                                 <p x-show="showMsg" @click.away="showMsg = false" class="media-copied" style="display: none;">Скопировано в буфер обмена
