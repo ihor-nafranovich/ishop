@@ -12,12 +12,12 @@
 
                 <div class="update-loading" wire:loading>
                     <div class="spinner-border" role="status">
-                        <span class="sr-only">Loading...</span>
+                        <span class="sr-only">Загрузка...</span>
                     </div>
                 </div>
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">FileManager</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Файловый менеджер</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -25,12 +25,12 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label for="path" class="form-label">Image</label>
+                        <label for="path" class="form-label">Изображение</label>
                         <div class="input-group mb-3">
                             <input type="file" class="form-control @error('path') is-invalid @enderror" id="path"
                                    wire:model="path">
                             <div class="input-group-append">
-                                <a class="btn btn-primary" wire:click="saveMedia">Save</a>
+                                <a class="btn btn-primary" wire:click="saveMedia">Сохранять</a>
                             </div>
                         </div>
 
@@ -41,11 +41,11 @@
                         @enderror
 
                         <div wire:loading wire:target="path">
-                            <span class="text-success">Uploading...</span>
+                            <span class="text-success">Загрузка...</span>
                         </div>
 
                         @if(!$errors->has('path') && $path && $path->isPreviewable())
-                            <p class="text-danger">Click on the photo to delete it.</p>
+                            <p class="text-danger">Нажмите на фотографию, чтобы удалить её.</p>
                             <img
                                 src="{{ $path->temporaryUrl() }}"
                                 alt=""
@@ -71,7 +71,7 @@
                                                 <a @click="navigator.clipboard.writeText(input), showMsg = true, setTimeout(() => showMsg = false, 1000)" class="btn btn-warning" title="Copy url">
                                                     <i class="far fa-copy"></i>
                                                 </a>
-                                                <p x-show="showMsg" @click.away="showMsg = false" class="media-copied" style="display: none;">Copied to Clipboard
+                                                <p x-show="showMsg" @click.away="showMsg = false" class="media-copied" style="display: none;">Скопировано в буфер обмена
                                                 </p>
 
                                             </div>

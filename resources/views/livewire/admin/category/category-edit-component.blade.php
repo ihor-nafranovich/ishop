@@ -4,14 +4,14 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('admin.categories.index') }}" wire:navigate class="btn btn-primary">Categories List</a>
+                <a href="{{ route('admin.categories.index') }}" wire:navigate class="btn btn-primary">Список категорий</a>
             </div>
             <div class="card-body">
 
                 <form wire:submit="save">
 
                     <div class="mb-3">
-                        <label for="title" class="form-label required">Title</label>
+                        <label for="title" class="form-label required">Заголовок</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                                placeholder="Category title"
                                wire:model="title">
@@ -23,9 +23,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="parent_id" class="form-label required">Parent category</label>
+                        <label for="parent_id" class="form-label required">Родительская категория</label>
                         <select wire:model="parent_id" id="parent_id" class="custom-select @error('parent_id') is-invalid @enderror">
-                            <option value="0" wire:key="0">Root category</option>
+                            <option value="0" wire:key="0">Корневая категория</option>
                             {!! \App\Helpers\Category\Category::getMenu('incs.menu-select-tpl') !!}
                         </select>
                         @error('parent_id')
@@ -37,7 +37,7 @@
 
                     <div class="mb-3">
                         <div class="card">
-                            <div class="card-header">Filters</div>
+                            <div class="card-header">Фильтры</div>
                             <div class="card-body">
                                 @foreach($filter_groups as $filter_group)
                                     <div wire:key="{{ $filter_group->id }}" class="form-check">
@@ -61,7 +61,7 @@
                         <button type="submit" class="btn btn-info">
                             Save
                             <div wire:loading wire:target="save" class="spinner-grow spinner-grow-sm" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                                <span class="visually-hidden">Загрузка...</span>
                             </div>
                         </button>
                     </div>

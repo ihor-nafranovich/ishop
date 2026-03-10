@@ -4,20 +4,20 @@
 
         <div class="update-loading" wire:loading wire:target="save">
             <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Загрузка...</span>
             </div>
         </div>
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('admin.filters.index') }}" wire:navigate class="btn btn-primary">Filters List</a>
+                <a href="{{ route('admin.filters.index') }}" wire:navigate class="btn btn-primary">Список фильтров</a>
             </div>
             <div class="card-body">
 
                 <form wire:submit="save">
 
                     <div class="mb-3">
-                        <label for="title" class="form-label required">Title</label>
+                        <label for="title" class="form-label required">Заголовок</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                                placeholder="Filter group title"
                                wire:model="title">
@@ -29,9 +29,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="filter_group_id" class="form-label required">Filter group</label>
+                        <label for="filter_group_id" class="form-label required">Группа фильтров</label>
                         <select wire:model="filter_group_id" id="filter_group_id" class="custom-select @error('filter_group_id') is-invalid @enderror">
-                            <option value="">Select filter group...</option>
+                            <option value="">Выберите группу фильтров...</option>
                             @foreach($filter_groups as $filter_group)
                                 <option value="{{ $filter_group->id  }}" wire:key="{{ $filter_group->id  }}">{{ $filter_group->title }}</option>
                             @endforeach
@@ -46,9 +46,9 @@
 
                     <div class="mb-3">
                         <button type="submit" class="btn btn-info">
-                            Save
+                            Сохранить
                             <div wire:loading wire:target="save" class="spinner-grow spinner-grow-sm" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                                <span class="visually-hidden">Загрузка...</span>
                             </div>
                         </button>
                     </div>

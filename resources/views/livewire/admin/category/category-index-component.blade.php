@@ -4,13 +4,13 @@
 
         <div class="update-loading" wire:loading>
             <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Загрузка...</span>
             </div>
         </div>
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('admin.categories.create') }}" wire:navigate class="btn btn-primary">Add Category</a>
+                <a href="{{ route('admin.categories.create') }}" wire:navigate class="btn btn-primary">Добавить категорию</a>
             </div>
             <div class="card-body">
 
@@ -20,7 +20,7 @@
                         <thead>
                         <tr>
                             <th style="width: 10%;">ID</th>
-                            <th style="width: 70%;">Title</th>
+                            <th style="width: 70%;">Заголовок</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
