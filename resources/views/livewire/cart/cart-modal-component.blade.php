@@ -13,7 +13,7 @@
                             <td class="product-img-td"><a href="{{ route('product', $item['slug']) }}"><img src="{{ asset($item['image']) }}" alt=""></a>
                             </td>
                             <td><a href="{{ route('product', $item['slug']) }}">{{ $item['title'] }}</a></td>
-                            <td>${{ $item['price'] }}</td>
+                            <td>{{ $item['price'] }} BYN</td>
                             <td>&times;{{ $item['quantity'] }}</td>
                             <td>
                                 <button class="btn btn-danger" wire:click="removeFromCart({{ $id }})" wire:loading.attr="disabled" wire:target="removeFromCart">
@@ -26,7 +26,7 @@
                     <tfoot>
                     <tr>
                         <td colspan="4" class="text-end">Итого:</td>
-                        <td>${{ \App\Helpers\Cart\Cart::getCartTotal() }}</td>
+                        <td>{{ \App\Helpers\Cart\Cart::getCartTotal() }} BYN</td>
                     </tr>
                     </tfoot>
                 </table>

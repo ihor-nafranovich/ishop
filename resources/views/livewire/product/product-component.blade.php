@@ -61,9 +61,9 @@
 
                     <div class="product-price">
                         @if($product->old_price)
-                            <small>${{ $product->old_price }}</small>
+                            <small>{{ $product->old_price }} BYN</small>
                         @endif
-                        ${{ $product->price }}
+                        {{ $product->price }} BYN
                     </div>
 
                     <p>{{ $product->excerpt }}</p>

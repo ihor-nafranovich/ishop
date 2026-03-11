@@ -107,7 +107,7 @@
 
                             <div class="d-flex justify-content-between pt-3 border-top">
                                 <h3>Итого</h3>
-                                <h3>${{ \App\Helpers\Cart\Cart::getCartTotal() }}</h3>
+                                <h3>{{ \App\Helpers\Cart\Cart::getCartTotal() }} BYN</h3>
                             </div>
 
                         </div>

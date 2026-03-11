@@ -21,7 +21,7 @@
         @if(count($search_results))
             <ul class="search-results">
                 @foreach($search_results as $product)
-                    <li><a wire:navigate href="{{ route('product', $product->slug) }}"><span>{{ $product->title }}</span><span>${{ $product->price }}</span></a></li>
+                    <li><a wire:navigate href="{{ route('product', $product->slug) }}"><span>{{ $product->title }}</span><span>{{ $product->price }} BYN</span></a></li>
                 @endforeach
             </ul>
         @endif

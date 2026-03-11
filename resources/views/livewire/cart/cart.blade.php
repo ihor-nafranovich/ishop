@@ -59,7 +59,7 @@
                                             {{ $item['title'] }}
                                         </a>
                                     </td>
-                                    <td>${{ $item['price'] }}</td>
+                                    <td>{{ $item['price'] }} BYN</td>
                                     <td x-data="{ qty: {{ $item['quantity'] }} }">
                                         <div class="input-group" style="flex-wrap: nowrap;">
                                             <input
@@ -78,7 +78,7 @@
                                             </button>
                                         </div>
                                     </td>
-                                    <td>${{ $item['quantity'] * $item['price'] }}</td>
+                                    <td>{{ $item['quantity'] * $item['price'] }} BYN</td>
                                     <td>
                                         <button class="btn btn-danger" wire:click="removeFromCart({{ $id }})" wire:loading.attr="disabled" wire:target="removeFromCart">
                                             <i class="fa-regular fa-circle-xmark"></i>
@@ -119,7 +119,7 @@
 
                     <div class="d-flex justify-content-between my-3">
                         <h3>Итого</h3>
-                        <h3>{{ \Illuminate\Support\Number::currency(\App\Helpers\Cart\Cart::getCartTotal(), in: 'USD') }}</h3>
+                        <h3>{{ \App\Helpers\Cart\Cart::getCartTotal() }} BYN</h3>
                     </div>
 
                     @if($cart)

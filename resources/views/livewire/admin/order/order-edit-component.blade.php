@@ -41,7 +41,7 @@
                         </tr>
                         <tr>
                             <th>Итого</th>
-                            <td>${{ $order->total }}</td>
+                            <td>{{ $order->total }} BYN</td>
                         </tr>
                         <tr>
                             <th>Создано</th>
@@ -90,7 +90,7 @@
                         @endforeach
                         <tr>
                             <td colspan="4" class="text-right font-weight-bold">
-                                Итого: ${{ $order->total }}
+                                Итого: {{ $order->total }} BYN
                             </td>
                         </tr>
                         </tbody>

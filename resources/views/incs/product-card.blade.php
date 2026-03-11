@@ -19,9 +19,9 @@
         <div class="product-bottom-details d-flex justify-content-between">
             <div class="product-price">
                 @if($product->old_price)
-                    <small>${{ $product->old_price }}</small>
+                    <small>{{ $product->old_price }} BYN</small>
                 @endif
-                ${{ $product->price }}
+                {{ $product->price }} BYN
             </div>
             <div class="product-links">
                 <button wire:click="add2Cart({{ $product->id }})" wire:loading.attr="disabled" class="btn btn-outline-secondary add-to-cart">

@@ -58,7 +58,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                             Общая сумма заказов</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ \Illuminate\Support\Number::currency($orders_total) }}</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $orders_total }} BYN</div>
                     </div>
                     <div class="col-auto">
                         <i class="fa-solid fa-dollar-sign fa-2x text-gray-300"></i>

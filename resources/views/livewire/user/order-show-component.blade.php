@@ -59,13 +59,13 @@
                                 <tr wire:key="{{ $product->id }}">
                                     <td><img src="{{ asset($product->image) }}" alt=""></td>
                                     <td><a href="{{ route('product', $product->slug) }}" wire:navigate>{{ $product->title }}</a></td>
-                                    <td>${{ $product->price }}</td>
+                                    <td>{{ $product->price }} BYN</td>
                                     <td>{{ $product->quantity }}</td>
-                                    <td>${{ $product->price * $product->quantity }}</td>
+                                    <td>{{ $product->price * $product->quantity }} BYN</td>
                                 </tr>
                             @endforeach
                             <tr>
-                                <th colspan="5" class="text-end">Итого: ${{ $order->total }}</th>
+                                <th colspan="5" class="text-end">Итого: {{ $order->total }} BYN</th>
                             </tr>
                             </tbody>
                         </table>

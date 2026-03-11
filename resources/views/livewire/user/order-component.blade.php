@@ -59,7 +59,7 @@
                                 @foreach($orders as $order)
                                     <tr wire:key="{{ $order->id }}">
                                         <td>{{ $order->id }}</td>
-                                        <td>${{ $order->total }}</td>
+                                        <td>{{ $order->total }} BYN</td>
                                         <td>{{ $order->status ? 'Завершен' : 'Новый' }}</td>
                                         <td>{{ $order->created_at }}</td>
                                         <td>{{ $order->updated_at }}</td>
