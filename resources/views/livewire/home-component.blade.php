@@ -5,7 +5,7 @@
         <meta name="description" content="{{ $desc ?? 'по умолчанию...' }}">
     @endsection
 
-    <div id="carousel" class="carousel slide carousel-fade">
+    <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
